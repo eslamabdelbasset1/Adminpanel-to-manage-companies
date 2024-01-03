@@ -4,10 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CompanyStoreRequest;
 use App\Models\Company;
-use Illuminate\Support\Facades\Storage;
 use Spatie\Image\Image;
-
-use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
@@ -23,35 +20,18 @@ class CompanyController extends Controller
             ->width(100)->height(100)->save();
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         // $companies = Company::latest()->paginate(10);
         // return view('company.index',compact('companies'));
-
         return view('company.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('company.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(CompanyStoreRequest $request)
     {
         //store logo
@@ -73,35 +53,16 @@ class CompanyController extends Controller
         return redirect()->route('companies.create')->with('message',['text' => __('company.status2'), 'class' => 'success']);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Company $company)
     {
         return view('company.edit',compact('company'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(CompanyStoreRequest $request, Company $company)
     {
         //store logo
@@ -126,12 +87,6 @@ class CompanyController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Company $company)
     {
         $company->delete();
