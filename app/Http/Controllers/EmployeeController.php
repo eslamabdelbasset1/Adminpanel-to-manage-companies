@@ -9,27 +9,18 @@ use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         return view('employee.index');
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         $companies = Company::select('id','name')->latest()->get();
         return view('employee.create',compact('companies'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(EmployeeStoreRequest $request)
     {
         Employee::create([
@@ -49,9 +40,6 @@ class EmployeeController extends Controller
         return view('employee.edit',compact('employee','companies'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(EmployeeStoreRequest $request, Employee $employee)
     {
         $employee->update([
@@ -66,10 +54,6 @@ class EmployeeController extends Controller
             ->with('message',['text' => __('employee.status3'), 'class' => 'success']);
     }
 
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Employee $employee)
     {
         $employee->delete();
