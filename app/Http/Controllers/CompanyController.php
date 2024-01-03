@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CompanyStoreRequest;
 use App\Models\Company;
+use Illuminate\Support\Facades\Storage;
 use Spatie\Image\Image;
 
 use Illuminate\Http\Request;
@@ -31,6 +32,7 @@ class CompanyController extends Controller
     {
         // $companies = Company::latest()->paginate(10);
         // return view('company.index',compact('companies'));
+
         return view('company.index');
     }
 

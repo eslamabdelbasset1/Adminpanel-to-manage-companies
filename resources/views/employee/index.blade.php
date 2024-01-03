@@ -41,7 +41,7 @@
 @section('script')
     <script type="text/javascript">
         $(document).ready( function () {
-            $.noConflict();
+            // $.noConflict();
             $('#EmployeesTable').DataTable({
                 "processing": true,
                 "serverSide": true,

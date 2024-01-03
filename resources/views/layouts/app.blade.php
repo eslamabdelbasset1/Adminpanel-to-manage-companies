@@ -10,17 +10,18 @@
     <title>@yield('title','Daily Task')</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('assets/js/app.js') }}" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+{{--    <script src="{{ asset('js/jquery-3.6.0.min.js') }}" defer></script>--}}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ asset('js/jquery.dataTables.min.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jquery.dataTables.min.css') }}" rel="stylesheet">
 </head>
 <body>
 <div id="app">
@@ -98,6 +99,6 @@
         @yield('content')
     </main>
 </div>
-@yield('script')
+    @yield('script')
 </body>
 </html>
