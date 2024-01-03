@@ -24,7 +24,6 @@ return [
     'btn4' => 'Back',
     'btn5' => 'Edit Employee',
 
-
     'alert' => 'Are You Sure?',
 ];
 
