@@ -2,7 +2,7 @@
 
 return [
 
-    'title1' => 'Company',
+    'Company' => 'Company',
     'title2' => 'Add Company',
     'title3' => 'Edit Company',
 

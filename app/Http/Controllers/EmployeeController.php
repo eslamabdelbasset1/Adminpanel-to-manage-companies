@@ -43,6 +43,12 @@ class EmployeeController extends Controller
         return redirect()->route('employees.create')->with('message',['text' => __('employee.status2'), 'class' => 'success']);
     }
 
+    public function edit(Employee $employee)
+    {
+        $companies = Company::select('id','name')->get();
+        return view('employee.edit',compact('employee','companies'));
+    }
+
     /**
      * Update the specified resource in storage.
      */

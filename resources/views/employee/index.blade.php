@@ -27,6 +27,7 @@
                                 <th>{{ __('employee.table6') }}</th>
                             </tr>
                             </thead>
+
                             <tbody>
                             </tbody>
                         </table>
@@ -40,12 +41,12 @@
 @section('script')
     <script type="text/javascript">
         $(document).ready( function () {
-            $.noConflict();
+            // $.noConflict();
             $('#EmployeesTable').DataTable({
                 "processing": true,
                 "serverSide": true,
                 "responsive": true,
-                {{--"ajax": "{{ route('api.employees') }}",--}}
+                "ajax": "{{ route('api.employees') }}",
                 "columns": [
                     { "data": "DT_RowIndex", name:'DT_RowIndex'},
                     { "data": "first_name" },
