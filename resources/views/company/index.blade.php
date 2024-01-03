@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-{{ __('companie.title1') }}
+{{ __('company.title1') }}
 @endsection
 @section('content')
 <div class="container">
@@ -11,19 +11,19 @@
         <div class="col-md-12 mt-2">
             <div class="card">
                 <div class="card-header">
-                    {{ __('companie.title1') }}
-                    <a href="{{ route('companies.create') }}" class="btn btn-sm btn-primary float-right">{{ __('companie.btn1') }}</a>
+                    {{ __('company.title1') }}
+                    <a href="{{ route('companies.create') }}" class="btn btn-sm btn-primary float-right">{{ __('company.btn1') }}</a>
                 </div>
                 <div class="card-body">
                     <table class="table text-center table-bordered table-striped" id="CompaniesTable">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>{{ __('companie.table1') }}</th>
-                                <th>{{ __('companie.table2') }}</th>
-                                <th>{{ __('companie.table3') }}</th>
-                                <th>{{ __('companie.table4') }}</th>
-                                <th>{{ __('companie.table5') }}</th>
+                                <th>{{ __('company.table1') }}</th>
+                                <th>{{ __('company.table2') }}</th>
+                                <th>{{ __('company.table3') }}</th>
+                                <th>{{ __('company.table4') }}</th>
+                                <th>{{ __('company.table5') }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -33,7 +33,7 @@
             </div>
         </div>
 
-       
+
 
     </div>
 </div>
